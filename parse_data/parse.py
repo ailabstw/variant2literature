@@ -73,7 +73,7 @@ def read_docx(path):
 
         data = PaperData(body, tables)
     except Exception:
-        logger.warning('fail: %s', path)
+        logger.info('fail: %s', path)
         traceback.print_exc()
         return PaperData()
 
@@ -90,7 +90,7 @@ def read_pdf(path, table_detect=True):
         data = PaperData(body, tables)
 
     except Exception:
-        logger.warning('fail: %s', path)
+        logger.info('fail: %s', path)
         traceback.print_exc()
         return PaperData()
 
@@ -125,7 +125,7 @@ def read_excel(path):
 
         data = PaperData(body, tables)
     except Exception:
-        logger.warning('fail: %s', path)
+        logger.info('fail: %s', path)
         traceback.print_exc()
         return PaperData()
 
@@ -196,7 +196,7 @@ def read_xml(path):  # pylint: disable=too-many-locals
         data = PaperData(body, tables)
 
     except Exception:
-        logger.warning('fail: %s', path)
+        logger.info('fail: %s', path)
         traceback.print_exc()
         return PaperData()
 

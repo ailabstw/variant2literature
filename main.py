@@ -63,7 +63,7 @@ def worker(que, args):  # pylint: disable=too-many-locals
     gene_extr = gene_ner.pygnormplus.Extractor()
     var_normalizer = VarNormalizer()
 
-    logger.warning('init OK')
+    logger.info('init OK')
 
     for _ in range(10):
         try:
@@ -73,7 +73,7 @@ def worker(que, args):  # pylint: disable=too-many-locals
 
         _id, dir_path = msg
 
-        logger.warning('start processing %s ...', _id)
+        logger.info('start processing %s ...', _id)
         t0 = time.time()
 
         try:
@@ -87,13 +87,13 @@ def worker(que, args):  # pylint: disable=too-many-locals
                 try:
                     results += extract(_id, idx, data, var_extr, gene_extr)
                 except TimeoutError:
-                    logger.warning(f'timeout {_id} {filename}')
+                    logger.info(f'timeout {_id} {filename}')
 
             normalize_var.process(results, _id, var_normalizer)
         except Exception:
             traceback.print_exc()
 
-        logger.warning('end processing {}: {:.3f} secs'.format(_id, time.time() - t0))
+        logger.info('end processing {}: {:.3f} secs'.format(_id, time.time() - t0))
 
 
 def main():
