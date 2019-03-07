@@ -1,0 +1,12 @@
+*cache*
+*.gz
+*.Model
+*.pth
+*.fasta
+*.o
+*.so
+*.offset
+data
+mysql_data
+PT_CTDGene.txt
+CRF++-0.58.tar.gz

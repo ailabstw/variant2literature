@@ -1,0 +1,15 @@
+[MESSAGES CONTROL]
+disable=broad-except,import-error,no-self-use,too-few-public-methods
+
+[FORMAT]
+max-line-length=120
+
+[BASIC]
+good-names=logger
+variable-rgx=[a-z_][a-z0-9_]{0,30}$
+attr-rgx=[a-z_][a-z0-9_]{0,30}$
+argument-rgx=[a-z_][a-z0-9_]{0,30}$
+ignore-redefined-outer-name=args
+
+[TYPECHECK]
+generated-members=numpy.*,torch.*
