@@ -47,7 +47,7 @@ copy `GNormPlusJava/Dictionary/PT_CTDGene.txt` to `variant2literature/models/`
 
 ## Usage
 
-#### Preparation
+#### Setup
 
 - build docker image by `make build`
 - compile fasterRCNN by `make compile`
