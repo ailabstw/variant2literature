@@ -11,7 +11,7 @@ Extract and normalize variants from academic papers in xml, pdf, doc, docx, xlsx
 ## Required Data and Packages
 
 ##### CRF++:
-- download <a href=https://taku910.github.io/crfpp/>CRF++.0.58.tar.gz<a> \
+- download <a href=https://taku910.github.io/crfpp/>CRF++.0.58.tar.gz</a> \
 put CRF++.0.58.tar.gz in `variant2literature/`
 
 
