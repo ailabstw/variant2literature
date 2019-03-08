@@ -73,3 +73,7 @@ copy `GNormPlusJava/Dictionary/PT_CTDGene.txt` to `variant2literature/models/`
 ## License
 
 This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+The [fasterRCNN implementation](https://github.com/jwyang/faster-rcnn.pytorch) used here is written by [Jianwei Yang](https://github.com/jwyang) and [Jiasen Lu](https://github.com/jiasenlu).
