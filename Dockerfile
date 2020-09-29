@@ -2,7 +2,7 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 RUN apt-get update \
     && apt-get install -y software-properties-common \
-    && add-apt-repository ppa:jonathonf/python-3.6 \
+    && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
     && apt-get install -y \
         build-essential cmake \
