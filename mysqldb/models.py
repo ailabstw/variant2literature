@@ -59,7 +59,7 @@ var_pmid = Table(
     Column('mention', String(200), nullable=False),
     Column('gene_start', Integer(), nullable=False),
     Column('gene_end', Integer(), nullable=False),
-    mysql_engine='MyISAM',
+    mysql_engine='InnoDB',
 )
 
 Index('idx_paper_id', var_pmid.c._id)
