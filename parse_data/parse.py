@@ -225,6 +225,22 @@ def read_zip(file_path, table_detect):
                     data_list.append((filename, data))
     return data_list
 
+def read_txt(file_path):
+    """read txt file
+    """
+    try:
+        with open(file_path, 'rb') as f:
+            s = f.read()
+        s = s.decode('utf8')
+        data = PaperData(s, [])
+
+    except Exception:
+        logger.info('fail: %s', path)
+        traceback.print_exc()
+        return PaperData()
+
+    return data
+
 
 def parse_file(file_path, table_detect):
     """parse files in different format
@@ -247,6 +263,9 @@ def parse_file(file_path, table_detect):
 
     elif ext in ['xlsx', 'xls', 'cvs']:
         yield (filename, read_excel(file_path))
+
+    elif ext in ['txt']:
+        yield (filename, read_txt(file_path))
 
     elif ext in ['zip'] and ftype.find('Zip') >= 0:
         yield from read_zip(file_path, table_detect)
