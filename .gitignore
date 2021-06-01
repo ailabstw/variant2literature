@@ -6,7 +6,9 @@
 *.o
 *.so
 *.offset
+**/.DS_Store
 data
 mysql_data
 PT_CTDGene.txt
 CRF++-0.58.tar.gz
+CRF++-0.58/
